@@ -30,7 +30,17 @@ pipeline {
 
 	            }
 	        }
-	
+	  stage('installPlat') {
+	            steps {
+	                echo "Building..with ${WORKSPACE}"
+	                UiPathInstallPlatform (
+					 
+					   cliVersion: 'WIN_22.10.8438.32859',
+					   forceInstall: true,
+					   traceLevel: 'None'
+					)
+	            }
+	        }
 
 	         // Build Stages
 	        stage('Build') {
