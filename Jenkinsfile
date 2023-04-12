@@ -36,7 +36,7 @@ pipeline {
 	                echo "Building..with ${WORKSPACE}"
 	                UiPathInstallPlatform (
 					 
-					   cliVersion: 'WIN_22.10.8438.32859',
+					   cliNupkgPath: 'C:\\Users\\balamanikanta.krishn\\Desktop\\UiPath_CLI\\UiPath.CLI.Windows.22.10.8438.32859.zip',
 					   forceInstall: true,
 					   traceLevel: 'None'
 					)
@@ -46,13 +46,12 @@ pipeline {
 	         // Build Stages
 	        stage('Build') {
 	            steps {
-	                echo "Building..with ${WORKSPACE}"
+	                
 	                UiPathPack (
-	                      outputPath: "Output\\${env.BUILD_NUMBER}",
-	                      projectJsonPath: "project.json",
-	                      version: [$class: 'ManualVersionEntry', version: "${MAJOR}.${MINOR}.${env.BUILD_NUMBER}"],
+	                      outputPath: "C:\\Users\\balamanikanta.krishn\\Desktop\\UiPath_CLI",
+	                      projectJsonPath: "C:\ProgramData\Jenkins\.jenkins\workspace\ipath_Testing_SecondProject_main\project.json",
 	                      useOrchestrator: false,
-						  traceLevel: 'None'
+			      traceLevel: 'None'
 	        )
 	            }
 	        }
