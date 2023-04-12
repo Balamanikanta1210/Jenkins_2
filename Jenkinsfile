@@ -49,7 +49,7 @@ pipeline {
 	                
 	                UiPathPack (
 	                      outputPath: "C:\\Users\\balamanikanta.krishn\\Desktop\\UiPath_CLI",
-	                      projectJsonPath: "C:\ProgramData\Jenkins\.jenkins\workspace\ipath_Testing_SecondProject_main\project.json",
+	                      projectJsonPath: "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\ipath_Testing_SecondProject_main\\project.json",
 	                      useOrchestrator: false,
 			      traceLevel: 'None'
 	        )
