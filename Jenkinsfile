@@ -35,7 +35,7 @@ pipeline {
 	            steps {
 	                echo "Building..with ${WORKSPACE}"
 	                UiPathInstallPlatform (
-					   cliVersion: 'X_22.10.8438.32859',
+					   cliVersion: 'WIN_22.10.8438.32859',
 					   cliNupkgPath: 'C:\\Users\\balamanikanta.krishn\\Desktop\\UiPath_CLI\\UiPath.CLI.Windows.22.10.8438.32859.zip',
 					   forceInstall: true,
 					   traceLevel: 'None'
